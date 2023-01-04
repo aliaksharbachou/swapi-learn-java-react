@@ -11,3 +11,7 @@ _After forking_
 yarn
 yarn dev 
 ```
+
+3) Then deploy your app to the GitHub pages. <https://pages.github.com/>
+4) Resolve eslint errors.
+5) Install MUI and @emotion 
