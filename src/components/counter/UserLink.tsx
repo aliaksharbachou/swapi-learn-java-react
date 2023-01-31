@@ -46,6 +46,7 @@ function UserLink(): JSX.Element {
             height: 150,
           }}
         />
+        <img src="/static/images/avatar.jpeg" alt="" />
         <Grid item xs={12} md={8}>
           {content}
         </Grid>
