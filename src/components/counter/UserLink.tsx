@@ -4,19 +4,19 @@ import Grid from '@mui/material/Grid';
 const links = [
   {
     id: 1,
-    icon: './src/components/resources/icons/gmail.png',
+    icon: '/static/icon/gmail.png',
     title: 'Email',
     link: 'mailto:faciorys@gmail.com',
   },
   {
     id: 2,
-    icon: './src/components/resources/icons/github.png',
+    icon: './static/icon/github.png',
     title: 'GitHub',
-    link: 'https://github.com/aliaksharbachou',
+    link: '/static/images/github.png',
   },
   {
     id: 3,
-    icon: './src/components/resources/icons/linkedin.png',
+    icon: '/static/icon/linkedin.png',
     title: 'LinkedIn',
     link: 'https://linkedin.com/aliaksandr-harbachou',
   },
@@ -40,7 +40,7 @@ function UserLink(): JSX.Element {
       <Grid container spacing={2}>
         <Avatar
           alt="Aliaksandr Harbachou"
-          src="./src/components/resources/avatar/image-10-01-22-12-10.jpeg"
+          src="/static/images/avatar.jpeg"
           sx={{
             width: 150,
             height: 150,
