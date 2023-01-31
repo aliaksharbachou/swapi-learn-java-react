@@ -1,46 +1,38 @@
-import { useState } from 'react';
+import BatteryChargingFullIcon from '@mui/icons-material/BatteryChargingFull';
+import { Typography } from '@mui/material';
+import Grid from '@mui/material/Grid';
 
-import { Button, Typography } from '@mui/material';
-
-interface CounterProps {
-  title: string
-}
-
-const me = {
-  name: 'Alex',
-  surname: 'A',
-};
-
-function Counter(props: CounterProps): JSX.Element {
-  const { title } = props;
-
-  const [meState, setMeState] = useState<typeof me>(me);
-
-  const clickHandle = (): void => {
-    setMeState({
-      name: 'Vasya',
-      surname: 'B',
-    });
-  };
-
-  const dropCountHandle = (): void => {
-    setMeState(me);
-  };
-
+function Counter(): JSX.Element {
   return (
-    <>
-      <Typography
-        variant="h1"
-        sx={{
-          display: 'flex',
-          justifyContent: 'center',
+    <Grid>
+      <Grid>
+        <Typography sx={{
+          color: '#d1453b',
+          textAlign: 'center',
+          fontSize: '3rem',
+          fontFamily: 'sans-serif',
+          margin: 'auto',
+          backgroundColor: 'rgba(255, 251, 255, 0.85)',
+          right: 0,
+          bottom: '2rem',
+          padding: '1rem',
+          boxShadow: '0 0 10px rgba(0, 0, 0, 0.3)',
+
         }}
-      >
-        {`${title} ${meState.name} ${meState.surname}`}
-      </Typography>
-      <Button onClick={clickHandle} variant="contained">Click</Button>
-      <Button onClick={dropCountHandle} variant="contained">Drop count</Button>
-    </>
+        >
+          CV
+          Aliaksandr Harbachou
+          {' '}
+          <BatteryChargingFullIcon sx={{
+            color: 'green',
+            textAlign: 'right',
+            fontSize: '3rem',
+          }}
+          />
+          {' '}
+        </Typography>
+      </Grid>
+    </Grid>
   );
 }
 

@@ -1,3 +1,4 @@
+/* eslint-disable max-len */
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import Accordion from '@mui/material/Accordion';
 import AccordionDetails from '@mui/material/AccordionDetails';
@@ -10,15 +11,15 @@ function SimpleAccordion(): JSX.Element {
       <Accordion>
         <AccordionSummary
           expandIcon={<ExpandMoreIcon />}
-          aria-controls="panel1a-content"
+          aria-controls="panel5a-content"
           id="panel1a-header"
         >
           <Typography>Accordion 1</Typography>
         </AccordionSummary>
         <AccordionDetails>
           <Typography>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
-            malesuada lacus ex, sit amet blandit leo lobortis eget.
+            I am  currently working as a Java Developer in Mbycicle company.
+            By now I am studiyng React js and It sounds cool !!!
           </Typography>
         </AccordionDetails>
       </Accordion>
@@ -40,7 +41,7 @@ function SimpleAccordion(): JSX.Element {
       <Accordion disabled>
         <AccordionSummary
           expandIcon={<ExpandMoreIcon />}
-          aria-controls="panel3a-content"
+          aria-controls="panel2a-content"
           id="panel3a-header"
         >
           <Typography>Disabled Accordion</Typography>

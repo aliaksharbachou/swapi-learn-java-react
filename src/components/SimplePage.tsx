@@ -1,13 +1,17 @@
+import About from './about/About';
+import UserLink from './counter/UserLink';
+import Experience from './experience/Experience';
+import MainSkills from './skills/MainSkills';
 import Counter from './counter';
-import SimpleAccordion from './my-accordion';
-
-const title = 'Hello Title!' as const;
 
 function SimplePage(): JSX.Element {
   return (
     <>
-      <Counter title={title} />
-      <SimpleAccordion />
+      <Counter />
+      <UserLink />
+      <About />
+      <MainSkills />
+      <Experience />
     </>
   );
 }
