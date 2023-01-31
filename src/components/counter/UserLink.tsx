@@ -40,7 +40,8 @@ function UserLink(): JSX.Element {
       <Grid container spacing={2}>
         <Avatar
           alt="Aliaksandr Harbachou"
-          src="./src/components/resources/avatar/image-10-01-22-12-10.jpeg"
+          // src="./src/components/resources/avatar/image-10-01-22-12-10.jpeg"
+          src="../src/components/resources/avatar/image-10-01-22-12-10.jpeg"
           sx={{
             width: 150,
             height: 150,
