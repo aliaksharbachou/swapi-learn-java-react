@@ -4,19 +4,19 @@ import Grid from '@mui/material/Grid';
 const links = [
   {
     id: 1,
-    icon: '/static/images/gmail.png',
+    icon: '/static/icon/gmail.png',
     title: 'Email',
     link: 'mailto:faciorys@gmail.com',
   },
   {
     id: 2,
-    icon: './src/components/resources/icons/github.png',
+    icon: './static/icon/github.png',
     title: 'GitHub',
     link: '/static/images/github.png',
   },
   {
     id: 3,
-    icon: '/static/images/linkedin.png',
+    icon: '/static/icon/linkedin.png',
     title: 'LinkedIn',
     link: 'https://linkedin.com/aliaksandr-harbachou',
   },
@@ -46,7 +46,6 @@ function UserLink(): JSX.Element {
             height: 150,
           }}
         />
-        <img src="/static/images/avatar.jpeg" alt="" />
         <Grid item xs={12} md={8}>
           {content}
         </Grid>
