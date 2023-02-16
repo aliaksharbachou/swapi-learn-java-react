@@ -9,7 +9,7 @@ function Counter(): JSX.Element {
         <Typography sx={{
           color: '#d1453b',
           textAlign: 'center',
-          fontSize: '3rem',
+          fontSize: '2.5rem',
           fontFamily: 'sans-serif',
           margin: 'auto',
           backgroundColor: 'rgba(255, 251, 255, 0.85)',
@@ -20,8 +20,7 @@ function Counter(): JSX.Element {
 
         }}
         >
-          CV
-          Aliaksandr Harbachou
+          CV GENERATOR
           {' '}
           <BatteryChargingFullIcon sx={{
             color: 'green',

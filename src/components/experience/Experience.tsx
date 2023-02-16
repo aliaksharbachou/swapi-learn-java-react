@@ -1,59 +1,35 @@
-import { Typography } from '@mui/material';
+import { List, ListItemText, Typography } from '@mui/material';
+import { Box } from '@mui/system';
 
-const timeExpirience = [
-  {
-    id: 1,
-    data: 'July 2022 - Present',
-    profession: 'Java Developer',
-    projects: 'Create app for investigation company',
-  },
-];
-
-function Experience(): JSX.Element {
-  const content = timeExpirience.map((post) => (
-    <div key={post.data}>
-      <h3>
-        {' '}
-        {post.data }
-        {': '}
-        {post.profession}
-      </h3>
-      <h4>
-        Last projects:
-        {' '}
-        {post.projects}
-      </h4>
-    </div>
-  ));
-
+function Experience():JSX.Element {
   return (
-    <Typography>
+    <Box sx={{
+      border: '1px solid white',
+      padding: '1.75rem 3rem',
+      backgroundColor: 'white',
+      borderRadius: '1rem',
+      gridArea: 'experience',
+    }}
+    >
+      <Typography variant="subtitle1" style={{ color: 'blue' }}>Experience</Typography>
 
-      <hr />
-      <h3 style={{
-        color: 'red',
-        fontFamily: 'unset',
-        fontSize: '1.5rem',
-        backgroundColor: '#A3C1B9',
-      }}
+      <List
+        style={{
+          borderLeft: '5px solid #42efe0', paddingLeft: '10px', borderRadius: '3px',
+        }}
+
       >
-        Work Experience
-      </h3>
-      <Typography sx={{
-        color: 'black',
-        textAlign: 'left',
-        fontSize: '0.9rem',
-        fontFamily: 'inherit',
-      }}
-      >
+        <ListItemText>
+          Vice Leader in Europe
+        </ListItemText>
+        <ListItemText>Lead Big Group Cats</ListItemText>
+        <ListItemText>Tel-U International</ListItemText>
+        <ListItemText>Staff Media at Center</ListItemText>
+        <ListItemText>Coordinator at Arena</ListItemText>
+        <ListItemText>Kabinet Bisha Muda</ListItemText>
+      </List>
 
-        {' '}
-        {content}
-
-      </Typography>
-
-    </Typography>
+    </Box>
   );
 }
-
 export default Experience;
