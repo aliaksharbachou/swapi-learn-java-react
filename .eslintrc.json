@@ -160,7 +160,8 @@
               [
                 "^src",
                 "^containers",
-                "^common"
+                "^common",
+                "^styles"
               ],
               [
                 "^fields"

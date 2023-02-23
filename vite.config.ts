@@ -25,8 +25,7 @@ export default defineConfig({
       containers: path.resolve(__dirname, 'src/containers'),
       common: path.resolve(__dirname, 'src/common'),
       fields: path.resolve(__dirname, 'src/containers/main-page/cv-form/components/fields'),
-
-      authConfig: path.resolve(__dirname, 'src/authConfig'),
+      styles: path.resolve(__dirname, 'src/styles'),
     },
     extensions: ['.js', '.ts', '.jsx', '.tsx', '.svg'],
   },

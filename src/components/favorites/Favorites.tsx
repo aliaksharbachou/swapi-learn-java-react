@@ -1,8 +1,6 @@
 import { motion } from 'framer-motion';
 
-import {
-  Box, Typography,
-} from '@mui/material';
+import { BoxBorderStyled, TypographyTitle } from 'styles';
 
 const pics = ['imagine',
   'movie',
@@ -11,19 +9,13 @@ const pics = ['imagine',
 
 function Favorites():JSX.Element {
   return (
-
-    <Box sx={{
-      border: '1px solid white',
-      padding: '1.75rem 3rem',
-      backgroundColor: 'white',
-      borderRadius: '1rem',
+    <BoxBorderStyled sx={{
       gridArea: 'fav',
     }}
-
     >
-      <Typography variant="subtitle1" style={{ color: 'blue' }}>
+      <TypographyTitle variant="subtitle1">
         Favorites
-      </Typography>
+      </TypographyTitle>
 
       {pics.map((pic) => (
         <motion.img
@@ -37,7 +29,7 @@ function Favorites():JSX.Element {
           alt={pic}
         />
       ))}
-    </Box>
+    </BoxBorderStyled>
   );
 }
 export default Favorites;

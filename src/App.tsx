@@ -1,8 +1,6 @@
 import Snowfall from 'react-snowfall';
 
-import {
-  Box,
-} from '@mui/material';
+import { Box } from '@mui/material';
 
 import Avatar from './components/avatar/Avatar';
 import Contacts from './components/contacts/Contacts';
@@ -24,8 +22,9 @@ function App(): JSX.Element {
         display: 'grid',
         gridGap: '2rem',
         background: 'linear-gradient(to right bottom, #560089, #82ffa1)',
-        // eslint-disable-next-line max-len
-        gridTemplateAreas: '"avatar avatar description description description" "experience experience experience education education" "skill skill skill fav fav" "contact contact contact contact contact"',
+        gridTemplateAreas: `"avatar avatar description description description" 
+        "experience experience experience education education" "skill skill skill fav fav" 
+        "contact contact contact contact contact"`,
         gridTemplateColumns: 'repeat(5, 1fr)',
         '@media(max-width: 600px)': {
           gridTemplateAreas: '"avatar" "description" "experience" "education" "skill" "fav" "contact"',
@@ -34,7 +33,6 @@ function App(): JSX.Element {
         },
       }}
     >
-
       <Avatar />
       <PersonDescription />
       <Experience />

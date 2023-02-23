@@ -1,4 +1,6 @@
-import { Box, Typography } from '@mui/material';
+import { Link, Typography } from '@mui/material';
+
+import { ContactBox, StyledImage, TypograhyDisplayContact } from './ContactsStyled';
 
 const links = [
   {
@@ -23,46 +25,23 @@ const links = [
 
 function Contacts():JSX.Element {
   return (
-    <Box sx={{
-      border: '1px solid white',
-      height: '100%',
-      gridArea: 'contact',
-      padding: '0.2rem',
-      backgroundColor: 'white',
-      borderRadius: '1rem',
-      display: 'flex',
-      alignItems: 'center',
-      justifyContent: 'center',
-    }}
-    >
-      <Typography
+    <ContactBox>
+      <TypograhyDisplayContact
         variant="subtitle2"
-        sx={{
-          color: 'blue',
-          display: 'flex',
-          width: '50%',
-          justifyContent: 'space-between',
-        }}
       >
         {links.map((link) => (
           <Typography variant="subtitle2">
-
-            <img
+            <StyledImage
               src={`static/icon/${link.icon}.png`}
-              width="28"
-              height="28"
               alt="icon"
             />
-            <a href={link.email}>
+            <Link href={link.email} target="_blanck">
               {link.title}
-              {'   '}
-            </a>
+            </Link>
           </Typography>
         ))}
-
-      </Typography>
-    </Box>
-
+      </TypograhyDisplayContact>
+    </ContactBox>
   );
 }
 export default Contacts;

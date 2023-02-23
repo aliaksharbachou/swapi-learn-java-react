@@ -1,8 +1,6 @@
 import { Box } from '@mui/system';
 
 function ColorForBackGround({ color }: {color: string}):JSX.Element {
-//   const colorForBackGrounds = ['blue', 'yellow', 'blue', 'pink', 'green', 'purple', 'black', 'brown'];
-
   return (
     <Box sx={{
       marginRight: '10px',

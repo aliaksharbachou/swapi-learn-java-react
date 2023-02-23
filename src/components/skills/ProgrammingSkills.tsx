@@ -1,8 +1,9 @@
-import {
-  Box, List, Typography,
-} from '@mui/material';
+import { Typography } from '@mui/material';
+
+import { BoxBorderStyled, TypographyTitle } from 'styles';
 
 import ColorForBackGround from './ColorForBackGround';
+import { ListSkills } from './ProgrammingSkillsStyled';
 
 const statusAndColor = [
   {
@@ -40,24 +41,12 @@ const statusAndColor = [
 ];
 function ProgrammingSkills():JSX.Element {
   return (
-    <Box sx={{
-      padding: '1.75rem 3rem',
-      backgroundColor: 'white',
-      borderRadius: '1rem',
+    <BoxBorderStyled sx={{
       gridArea: 'skill',
-
     }}
     >
-      <Typography variant="subtitle1" style={{ color: 'blue' }}>Programming Skills</Typography>
-
-      <List sx={{
-        display: 'flex',
-        flexDirection: 'column',
-        flexWrap: 'wrap',
-        gap: '1rem',
-        maxHeight: '50%',
-      }}
-      >
+      <TypographyTitle variant="subtitle1">Programming Skills</TypographyTitle>
+      <ListSkills>
         {statusAndColor.map((pic) => (
           <Typography sx={{
             display: 'flex',
@@ -67,8 +56,8 @@ function ProgrammingSkills():JSX.Element {
             {pic.title}
           </Typography>
         ))}
-      </List>
-    </Box>
+      </ListSkills>
+    </BoxBorderStyled>
   );
 }
 export default ProgrammingSkills;
