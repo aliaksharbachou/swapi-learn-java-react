@@ -35,7 +35,6 @@ export const BoxAppConfiguratiom = styled(Box)(({ theme }) => ({
     gridTemplateColumns: '1fr',
 
   },
-
 }));
 
 export const MotionImg = styled(motion.img)({
@@ -43,3 +42,25 @@ export const MotionImg = styled(motion.img)({
   height: '100%',
   width: '100%',
 });
+export const resources = {
+  en: {
+    translation: {
+      img: 'static/images/start.jpg',
+      name: 'Mr.Kit',
+      status: 'Full Stack Developer',
+      textInput: 'Describe yourself',
+    },
+  },
+  ru: {
+    translation: {
+      img: 'static/images/kit.jpg',
+      name: 'Мистер Кот',
+      status: 'Сеньёр Помидор',
+      textInput: 'Опишите себя',
+    },
+  },
+};
+
+export function getRandomColor(): string {
+  return `#${Math.floor(Math.random() * 16777215).toString(16)}`;
+}

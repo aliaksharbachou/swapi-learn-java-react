@@ -1,22 +1,22 @@
+import { useTranslation } from 'react-i18next';
+
 import { Box } from '@mui/material';
 
 import { MotionImg } from 'styles';
 
 function Avatar():JSX.Element {
+  const { t } = useTranslation();
+  const v = t('img');
   const onDownload = ():void => {
     const link = document.createElement('a');
-    link.download = 'start.jpg';
-    link.href = 'static/images/start.jpg';
+    link.download = v.replaceAll('static/images/', '');
+    link.href = v;
     link.click();
   };
-
   return (
-    <Box sx={{
-      gridArea: 'avatar',
-    }}
-    >
+    <Box sx={{ gridArea: 'avatar' }}>
       <MotionImg
-        src="static/images/start.jpg"
+        src={v}
         alt="avatar"
         onDoubleClick={onDownload}
         initial={{ opacity: 0, scale: 0, rotateY: 180 }}
@@ -26,4 +26,5 @@ function Avatar():JSX.Element {
     </Box>
   );
 }
+
 export default Avatar;
